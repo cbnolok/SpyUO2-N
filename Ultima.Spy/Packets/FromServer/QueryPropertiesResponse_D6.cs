@@ -22,7 +22,7 @@ namespace Ultima.Spy.Packets
 
 		protected override void Parse( BigEndianReader reader )
 		{
-			reader.ReadByte(); // ID
+			reader.ReadByte();  // ID
 			reader.ReadInt16(); // Size
 			reader.ReadInt16();
 
@@ -33,9 +33,14 @@ namespace Ultima.Spy.Packets
 			_Properties = new List<QueryPropertiesProperty>();
 			int cliloc;
 
-			while ( ( cliloc = reader.ReadInt32() ) != 0 )
-				_Properties.Add( new QueryPropertiesProperty( cliloc, reader ) );
-		}
+            for (int len = 0; len < ((Data.Length - 15 ) / 4); len++)
+            {
+                cliloc = reader.ReadInt32();
+                if (cliloc == 0)
+                    break;
+                _Properties.Add(new QueryPropertiesProperty(cliloc, reader));
+            }
+        }
 	}
 
 	public class QueryPropertiesProperty

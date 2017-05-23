@@ -92,15 +92,14 @@ namespace Ultima.Spy.Application
 				try
 				{
 					if ( ClientSpyStarter.GetClientType( process ) != UltimaClientType.Invalid )
-					{
-                        userList.Add(process);
                         _Selected = process;
-					}
 				}
 				catch
 				{
 				}
-			}
+
+                userList.Add(process);
+            }
 
 			e.Result = userList;
 		}

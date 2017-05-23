@@ -64,12 +64,12 @@ namespace Ultima.Spy
 		{
 			string fileName = process.ProcessName;
 
-			if ( String.Equals( fileName, ClassicClientProcessName, StringComparison.InvariantCultureIgnoreCase ) )
-				return UltimaClientType.Classic;
-			else if ( String.Equals( fileName, EnhancedClientProcessName, StringComparison.InvariantCultureIgnoreCase ) )
-				return UltimaClientType.Enhanced;
+            if (fileName.Contains(ClassicClientProcessName))
+                return UltimaClientType.Classic;
+            else if (fileName.Contains(EnhancedClientProcessName))
+                return UltimaClientType.Enhanced;
 
-			return UltimaClientType.Invalid;
+            return UltimaClientType.Invalid;
 		}
 
 		/// <summary>
