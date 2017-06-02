@@ -44,7 +44,7 @@ namespace Ultima.Spy.Packets
 		public ShopListItem( BigEndianReader reader )
 		{
 			_Price = reader.ReadInt32();
-			_Name = reader.ReadAsciiString();
+			_Name = reader.ReadAsciiString( reader.ReadByte() );
 		}
 
 		public override string ToString()
