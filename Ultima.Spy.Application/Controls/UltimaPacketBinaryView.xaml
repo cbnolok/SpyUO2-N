@@ -24,7 +24,7 @@
 
 		<!-- Header -->
 		<Border Grid.Row="0" Style="{StaticResource ToolbarBorder}">
-			<Label Content="Binary Data" Style="{StaticResource ToolbarTitleText}" />
+			<Label Content="Binary Data" Style="{StaticResource ToolbarTitleText}" Height="28" />
 		</Border>
 
 		<!-- Control Panel -->

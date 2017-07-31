@@ -240,22 +240,23 @@
 						<TextBlock Text="Filter" Style="{StaticResource MainRibbonButtonText}" />
 					</StackPanel>
 				</ToggleButton>
+                <Border Style="{StaticResource MainRibbonSeparator}" />
 				<Button Style="{StaticResource MainRibbonButton}" x:Name="ClilocButton" ToolTip="Show cliloc browser" Click="ClilocButton_Click">
 					<StackPanel>
 						<Image Source="Images/Book.png" Style="{StaticResource MainRibbonButtonImage}" />
 						<TextBlock Text="Clilocs" Style="{StaticResource MainRibbonButtonText}" />
 					</StackPanel>
 				</Button>
-				<Button Style="{StaticResource MainRibbonButton}" x:Name="LootAnalyzerButton" ToolTip="Show loot analyzer" IsEnabled="False" Click="LootAnalyzerButton_Click">
-					<StackPanel>
-						<Image Source="Images/Briefcase.png" Style="{StaticResource MainRibbonButtonImage}" />
-						<TextBlock Text="Loot" Style="{StaticResource MainRibbonButtonText}" />
-					</StackPanel>
-				</Button>
-			</StackPanel>
+                <Button Style="{StaticResource MainRibbonButton}" x:Name="LootAnalyzerButton" ToolTip="Show loot analyzer" IsEnabled="False" Click="LootAnalyzerButton_Click">
+                    <StackPanel>
+                        <Image Source="Images/Briefcase.png" Style="{StaticResource MainRibbonButtonImage}" />
+                        <TextBlock Text="Loot" Style="{StaticResource MainRibbonButtonText}" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
 
 			<StackPanel Grid.Column="1" Orientation="Horizontal">
-				<Button Style="{StaticResource MainRibbonButton}" Click="SubmitBug_Click" ToolTip="Submit bug">
+				<Button Style="{StaticResource MainRibbonButton}" Click="SubmitBug_Click" ToolTip="Submit bug" IsEnabled="False">
 					<StackPanel>
 						<Image Source="Images/Bug.png" Style="{StaticResource MainRibbonButtonImage}" />
 						<TextBlock Text="Bug" Style="{StaticResource MainRibbonButtonText}" />

@@ -19,7 +19,7 @@
 
 		<!-- Header -->
 		<Border Grid.Row="0" Style="{StaticResource ToolbarBorder}">
-			<Label x:Name="HeaderText" Content="{Binding Converter={StaticResource UltimaPacketTitleConverter}}" Style="{StaticResource ToolbarTitleText}" />
+			<Label x:Name="HeaderText" Content="{Binding Converter={StaticResource UltimaPacketTitleConverter}}" Style="{StaticResource ToolbarTitleText}" Height="28" />
 		</Border>
 
 		<Border Grid.Row="1" Style="{StaticResource ToolbarBorder}" Margin="0,2">

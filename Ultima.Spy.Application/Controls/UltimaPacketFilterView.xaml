@@ -116,7 +116,7 @@
 
 		<!-- Header -->
 		<Border Grid.Row="0" Style="{StaticResource ToolbarBorder}">
-			<Label Content="Packet Filter" Style="{StaticResource ToolbarTitleText}" />
+			<Label Content="Packet Filter" Style="{StaticResource ToolbarTitleText}" Height="28" />
 		</Border>
 
 		<!-- Control Panel -->
